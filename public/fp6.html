@@ -1346,67 +1346,68 @@
         </div>
         <div data-silex-type="html" class="editable-style html-element silex-id-1518762919498-2 page-page-1 paged-element" data-silex-id="silex-id-1518762919498-2" style="">
             <div class="silex-element-content">
-                <script type="text/javascript" src="https://www.amcharts.com/lib/3/gauge.js"></script>
-                <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+                <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+                <script type="text/javascript" src="https:http%3a/cdn.amcharts.com/lib/3/gauge.js"></script>
+
 
                 <!-- amCharts javascript code -->
                 <script type="text/javascript">
-                    AmCharts.makeChart("ramused",
-                    				{
-                    					"type": "gauge",
-                    					"marginBottom": 0,
-                    					"marginTop": 0,
-                    					"startDuration": 0,
-                    					"backgroundAlpha": 1,
-                    					"fontSize": 13,
-                    					"theme": "light",
-                    					"arrows": [
-                    						{
-                    							"id": "GaugeArrow-1",
-                    							"value": 31
-                    						}
-                    					],
-                    					"axes": [
-                    						{
-                    							"bottomText": "(%)\nram used",
-                    							"endValue": 100,
-                    							"id": "GaugeAxis-1",
-                    							"radius": "100%",
-                    							"valueInterval": 20,
-                    							"bands": [
-                    								{
-                    									"alpha": 0.7,
-                    									"color": "#00cc00",
-                    									"endValue": 60,
-                    									"id": "GaugeBand-1",
-                    									"startValue": 0
-                    								},
-                    								{
-                    									"alpha": 0.7,
-                    									"color": "#cccc00",
-                    									"endValue": 80,
-                    									"id": "GaugeBand-2",
-                    									"startValue": 60
-                    								},
-                    								{
-                    									"alpha": 0.7,
-                    									"color": "#CC0000",
-                    									"endValue": 100,
-                    									"id": "GaugeBand-3",
-                    									"innerRadius": "95%",
-                    									"startValue": 80
-                    								}
-                    							]
-                    						}
-                    					],
-                    					"allLabels": [],
-                    					"balloon": {},
-                    					"titles": []
-                    				}
-                    			);
+                    AmCharts.makeChart("newvisits",
+                    {
+                    "type": "gauge",
+                    "marginBottom": 0,
+                    "marginTop": 0,
+                    "startDuration": 0,
+                    "fontSize": 13,
+                    "theme": "light",
+                    "arrows": [
+                    {
+                    "id": "GaugeArrow-1",
+                    "value": 5
+                    }
+                    ],
+                    "axes": [
+                    {
+                    "bottomText": "new visits",
+                    "endValue": 100,
+                    "id": "GaugeAxis-1",
+                    "valueInterval": 20,
+                    "bands": [
+                    {
+                    "alpha": 0.7,
+                    "color": "#cc0000",
+                    "endValue": 30,
+                    "id": "GaugeBand-1",
+                    "startValue": 0
+                    },
+                    {
+                    "alpha": 0.7,
+                    "color": "#00cc00",
+                    "endValue": 100,
+                    "id": "GaugeBand-2",
+                    "startValue": 60
+                    },
+                    {
+                    "alpha": 0.7,
+                    "color": "#ccCC00",
+                    "endValue": 60,
+                    "id": "GaugeBand-3",
+                    "innerRadius": "95%",
+                    "startValue": 30
+                    }
+                    ]
+                    }
+                    ],
+                    "allLabels": [],
+                    "balloon": {},
+                    "titles": []
+                    }
+                    );
                 </script>
+                <div id="newvisits" style="width: 100%; height: 150px; background-color: #FFFFFF;"></div>
 
-                <div id="ramused" style="width: 100%; height: 150px; background-color: #FFFFFF;"></div>
+
+
             </div>
         </div>
     </div>
