@@ -631,6 +631,8 @@
 
 
 
+
+
     <style id="current-page-style">
         .page-page-1 {
             display: inherit;
@@ -1417,7 +1419,7 @@
                 <!-- amCharts javascript code -->
                 <!-- amCharts javascript code -->
                 <script type="text/javascript">
-                    AmCharts.makeChart("bouncerate",
+                    var chart1 = .makeChart("bouncerate",
                     				{
                     					"type": "gauge",
                     					"marginBottom": 0,
@@ -1473,10 +1475,10 @@
                     			
                     			function randomValue() {
                                      var value = Math.round(Math.random() * 100);
-                                     chart.arrows[0].setValue(value);
-                                     chart.axes[0].setTopText(value + " %");
+                                     chart1.arrows[0].setValue(value);
+                                     chart1.axes[0].setTopText(value + " %");
                                      // adjust darker band to new value
-                                     chart.axes[0].bands[1].setEndValue(value);
+                                     chart1.axes[0].bands[1].setEndValue(value);
                                 }
                 </script>
 
@@ -1702,6 +1704,8 @@
             </div>
         </div>
     </div>
+
+
 
 
 
