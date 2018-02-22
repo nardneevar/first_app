@@ -773,6 +773,8 @@
 
 
 
+
+
     <style id="current-page-style">
         .page-page-1 {
             display: inherit;
@@ -1667,13 +1669,12 @@
             <div class="silex-element-content">
                 <!-- Styles -->
                 <style>
-                    #returningusersdiv {
+                    #returningusers {
                         width: 100%;
                         height: 200px;
                         margin: auto;
                     }
                 </style>
-
 
                 <!-- Resources -->
                 <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
@@ -1684,44 +1685,43 @@
 
                 <!-- Chart code -->
                 <script>
-                    var gaugeChart = AmCharts.makeChart("returningusersdiv", {
+                    var gaugeChart = AmCharts.makeChart("returningusers", {
                       "type": "gauge",
                       "theme": "light",
-                      "startDuration": 6,
                       "axes": [{
                         "axisAlpha": 0,
                         "tickAlpha": 0,
-                        "labelsEnabled": true,
+                        "labelsEnabled": false,
                         "startValue": 0,
                         "endValue": 100,
                         "startAngle": 0,
-                        "endAngle": 360,
+                        "endAngle": 270,
                         "bands": [{
                           "color": "#eee",
                           "startValue": 0,
                           "endValue": 100,
-                          "radius": 100%",
-                          "innerRadius": "0%",
+                          "radius": "80%",
+                          "innerRadius": "65%"
                         }, {
                           "color": "#fdd400",
                           "startValue": 0,
-                          "endValue": 79,
-                          "radius": "100%",
-                          "innerRadius": "85%",
-                          "balloonText": "79%"
-                        }],
-                        "bottomText": "79%",
-                        "bottomTextYOffset": 20,
+                          "endValue": 35,
+                          "radius": "80%",
+                          "innerRadius": "65%",
+                          "balloonText": "35%"
+                        },]
                       }]
                     });
                 </script>
 
                 <!-- HTML -->
-                <div id="returningusersdiv"></div>
+                <div id="returningusers"></div>
             </div>
         </div>
 
     </div>
+
+
 
 
 
