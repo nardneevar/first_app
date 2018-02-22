@@ -843,6 +843,8 @@
 
 
 
+
+
     <style id="current-page-style">
         .page-page-1 {
             display: inherit;
@@ -1758,7 +1760,7 @@
                 <div class="silex-element-content">
                     <!-- Styles -->
                     <style>
-                        #availedservice {
+                        #chartdiv {
                             width: 100%;
                             height: 200px;
                             margin: auto;
@@ -1774,7 +1776,7 @@
 
                     <!-- Chart code -->
                     <script>
-                        var gaugeChart = AmCharts.makeChart("availedservice", {
+                        var gaugeChart = AmCharts.makeChart("chartdiv", {
                           "type": "gauge",
                           "theme": "light",
                           "axes": [{
@@ -1789,6 +1791,19 @@
                               "color": "#eee",
                               "startValue": 0,
                               "endValue": 100,
+                              "radius": "100%",
+                              "innerRadius": "85%"
+                            }, {
+                              "color": "#84b761",
+                              "startValue": 0,
+                              "endValue": 80,
+                              "radius": "100%",
+                              "innerRadius": "85%",
+                              "balloonText": "90%"
+                            }, {
+                              "color": "#eee",
+                              "startValue": 0,
+                              "endValue": 100,
                               "radius": "80%",
                               "innerRadius": "65%"
                             }, {
@@ -1798,19 +1813,75 @@
                               "radius": "80%",
                               "innerRadius": "65%",
                               "balloonText": "35%"
+                            }, {
+                              "color": "#eee",
+                              "startValue": 0,
+                              "endValue": 100,
+                              "radius": "60%",
+                              "innerRadius": "45%"
+                            }, {
+                              "color": "#cc4748",
+                              "startValue": 0,
+                              "endValue": 92,
+                              "radius": "60%",
+                              "innerRadius": "45%",
+                              "balloonText": "92%"
+                            }, {
+                              "color": "#eee",
+                              "startValue": 0,
+                              "endValue": 100,
+                              "radius": "40%",
+                              "innerRadius": "25%"
+                            }, {
+                              "color": "#67b7dc",
+                              "startValue": 0,
+                              "endValue": 68,
+                              "radius": "40%",
+                              "innerRadius": "25%",
+                              "balloonText": "68%"
                             }]
-                          }]
+                          }],
+                          "allLabels": [{
+                            "text": "First option",
+                            "x": "49%",
+                            "y": "5%",
+                            "size": 15,
+                            "bold": true,
+                            "color": "#84b761",
+                            "align": "right"
+                          }, {
+                            "text": "Second option",
+                            "x": "49%",
+                            "y": "15%",
+                            "size": 15,
+                            "bold": true,
+                            "color": "#fdd400",
+                            "align": "right"
+                          }, {
+                            "text": "Third option",
+                            "x": "49%",
+                            "y": "24%",
+                            "size": 15,
+                            "bold": true,
+                            "color": "#cc4748",
+                            "align": "right"
+                          }, {
+                            "text": "Fourth option",
+                            "x": "49%",
+                            "y": "33%",
+                            "size": 15,
+                            "bold": true,
+                            "color": "#67b7dc",
+                            "align": "right"
+                          }],
+                          "export": {
+                            "enabled": true
+                          }
                         });
                     </script>
 
                     <!-- HTML -->
-                    <div id="availedservice" style="overflow: hidden; text-align: left;">
-                        <div class="amcharts-main-div" style="position: relative;">
-                            <div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 134px; height: 200px; padding: 0px; touch-action: auto;"><svg version="1.1" style="position: absolute; width: 134px; height: 200px; top: 0.296875px; left: 0.296875px;"><desc>JavaScript chart by amCharts 3.21.12</desc><g><path cs="100,100" d="M0.5,0.5 L133.5,0.5 L133.5,199.5 L0.5,199.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0"></path></g><g></g><g></g><g></g><g></g><g></g><g><g><g><g opacity="0.8"><path cs="1000,1000" d=" M67,65 L67,57 A43,43,0,1,1,24,100.00000000000001 L32,100 A35,35,0,1,0,67,65 Z" fill="#eee" stroke="#000000" stroke-width="0" stroke-opacity="0"></path></g><g opacity="0.8"><path cs="1000,1000" d=" M67,65 L67,57 A43,43,0,0,1,109.8674453505245,103.37374111629732 L101.89210668065948,102.74606835047457 A35,35,0,0,0,67,65 Z" fill="#fdd400" stroke="#000000" stroke-width="0" stroke-opacity="0"></path></g></g><g><path cs="1000,1000" d=" M67,47 L67,44 A56,56,0,1,1,11,100.00000000000001 L14,100.00000000000001 A53,53,0,1,0,67,47 Z" fill="#000000" fill-opacity="0" stroke-width="0" stroke-opacity="0"></path></g><path cs="100,100" d="M67.5,46.35 L67.5,61.35" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M77.6467,47.30915 L76.14765,55.16744" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M87.43394,50.1526 L84.48895,57.59082" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M96.51502,54.77964 L92.22841,61.53427" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M104.56823,61.02635 L99.09185,66.8581" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M111.30827,68.67143 L99.17302,77.48821" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M116.49638,77.44405 L109.25777,80.85029" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M119.94878,87.03344 L112.20011,89.02296" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M121.54315,97.09989 L113.55893,97.60222" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M121.22301,107.28679 L113.28609,106.28413" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M118.99971,117.23327 L104.73386,112.59802" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M114.95201,126.58696 L107.94155,122.73293" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M109.22329,135.01651 L103.05919,129.91712" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M102.01651,142.22329 L96.91712,136.05919" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M93.58696,147.95201 L89.73293,140.94155" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M84.23327,151.99971 L79.59802,137.73386" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M74.28679,154.22301 L73.28413,146.28609" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M64.09989,154.54315 L64.60222,146.55893" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M54.03344,152.94878 L56.02296,145.20011" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M44.44405,149.49638 L47.85029,142.25777" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M35.67143,144.30827 L44.48821,132.17302" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M28.02635,137.56823 L33.8581,132.09185" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M21.77964,129.51502 L28.53427,125.22841" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M17.1526,120.43394 L24.59082,117.48895" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M14.30915,110.6467 L22.16744,109.14765" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M13.35,100.5 L28.35,100.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path></g></g><g></g><g></g><g></g><g></g><g></g><g><g></g></g><g></g><g></g><g></g><g></g><g></g></svg>
-                                <a href="//www.amcharts.com" title="JavaScript charts" style="position: absolute; text-decoration: none; color: rgb(0, 0, 0); font-family: Verdana; font-size: 11px; opacity: 0.7; display: block; left: 5px; top: 5px;">JS chart by amCharts</a>
-                            </div>
-                        </div>
-                    </div>
+                    <div id="chartdiv"></div>
                 </div>
             </div>
         </div>
@@ -2471,6 +2542,8 @@
             </div>
         </div>
     </div>
+
+
 </body>
 
 </html>
