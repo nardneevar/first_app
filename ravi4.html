@@ -777,6 +777,8 @@
 
 
 
+
+
     <style id="current-page-style">
         .page-page-1 {
             display: inherit;
@@ -1529,71 +1531,55 @@
         </div>
         <div data-silex-type="html" class="editable-style html-element silex-id-1518762893783-0 page-page-1 paged-element" data-silex-id="silex-id-1518762893783-0" style="">
             <div class="silex-element-content">
-                <script type="text/javascript" src="https://www.amcharts.com/lib/3/gauge.js"></script>
-                <script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+                <!-- Styles -->
+                <style>
+                    #availedservice {
+                        width: 100%;
+                        height: 200px;
+                        margin: auto;
+                    }
+                </style>
 
-                <!-- amCharts javascript code -->
-                <script type="text/javascript">
-                    AmCharts.makeChart("serverload",
-                        				{
-                        					"type": "gauge",
-                        					"marginBottom": 0,
-                        					"marginTop": 0,
-                        					"startDuration": 2,
-                        					"backgroundAlpha": 1,
-                        					"fontSize": 10,
-                        					"theme": "light",
-                        					"arrows": [
-                        						{
-                        							"id": "GaugeArrow-1",
-                        							"value": 57
-                        						}
-                        					],
-                        					"axes": [
-                        						{
-                        							"bottomText": "(%) \n server load",
-                        							"endValue": 100,
-                        							"id": "GaugeAxis-1",
-                        							"valueInterval": 20,
-                        							"bands": [
-                        								{
-                        									"alpha": 0.7,
-                        									"color": "#00cc00",
-                        									"endValue": 30,
-                        									"id": "GaugeBand-1",
-                        									"startValue": 0
-                        								},
-                        								{
-                        									"alpha": 0.7,
-                        									"color": "#cccc00",
-                        									"endValue": 60,
-                        									"id": "GaugeBand-2",
-                        									"startValue": 30
-                        								},
-                        								{
-                        									"alpha": 0.7,
-                        									"color": "#CC0000",
-                        									"endValue": 100,
-                        									"id": "GaugeBand-3",
-                        									"startValue": 60
-                        								}
-                        							]
-                        						}
-                        					],
-                        					"allLabels": [],
-                        					"balloon": {},
-                        					"titles": []
-                        				}
-                        			);
+                <!-- Resources -->
+                <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+                <script src="https://www.amcharts.com/lib/3/gauge.js"></script>
+                <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+                <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all">
+                <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
+
+                <!-- Chart code -->
+                <script>
+                    var gaugeChart = AmCharts.makeChart("availedservice", {
+                      "type": "gauge",
+                      "theme": "light",
+                      "axes": [{
+                        "axisAlpha": 0,
+                        "tickAlpha": 0,
+                        "labelsEnabled": false,
+                        "startValue": 0,
+                        "endValue": 100,
+                        "startAngle": 0,
+                        "endAngle": 270,
+                        "bands": [{
+                          "color": "#eee",
+                          "startValue": 0,
+                          "endValue": 100,
+                          "radius": "80%",
+                          "innerRadius": "65%"
+                        }, {
+                          "color": "#fdd400",
+                          "startValue": 0,
+                          "endValue": 35,
+                          "radius": "80%",
+                          "innerRadius": "65%",
+                          "balloonText": "35%"
+                        }]
+                      }]
+                    });
                 </script>
-                <div id="serverload" style="width: 100%; height: 150px; background-color: rgb(255, 255, 255); overflow: hidden; text-align: left;">
-                    <div class="amcharts-main-div" style="position: relative;">
-                        <div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 134px; height: 150px; padding: 0px; touch-action: auto;"><svg version="1.1" style="position: absolute; width: 134px; height: 150px; top: 0.296875px; left: 0.296875px;"><desc>JavaScript chart by amCharts 3.21.12</desc><g><path cs="100,100" d="M0.5,0.5 L133.5,0.5 L133.5,149.5 L0.5,149.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="1" stroke-width="1" stroke-opacity="0"></path></g><g></g><g></g><g></g><g></g><g></g><g><g><g><g opacity="0.7"><path cs="1000,1000" d=" M27.16283142591582,97.99999999999999 L20.234628195640312,101.99999999999999 A54,54,0,0,1,26.87017942422071,38.86694725662166 L32.81533802803987,44.21999210749252 A46,46,0,0,0,27.16283142591582,97.99999999999999 Z" fill="#00cc00" stroke="#000000" stroke-width="0" stroke-opacity="0"></path></g><g opacity="0.7"><path cs="1000,1000" d=" M32.81533802803987,44.21999210749252 L26.87017942422071,38.86694725662166 A54,54,0,0,1,88.96377872609321,25.66854528729955 L85.70988558148682,32.97690894844036 A46,46,0,0,0,32.81533802803987,44.21999210749252 Z" fill="#cccc00" stroke="#000000" stroke-width="0" stroke-opacity="0"></path></g><g opacity="0.7"><path cs="1000,1000" d=" M85.70988558148682,32.97690894844036 L88.96377872609321,25.66854528729955 A54,54,0,0,1,113.76537180435969,101.99999999999999 L106.83716857408419,97.99999999999999 A46,46,0,0,0,85.70988558148682,32.97690894844036 Z" fill="#CC0000" stroke="#000000" stroke-width="0" stroke-opacity="0"></path></g></g><g><path cs="1000,1000" d=" M21.100653599424746,101.49999999999999 L18.50257738807143,102.99999999999999 A56,56,0,1,1,115.49742261192857,102.99999999999999 L112.89934640057525,101.49999999999999 A53,53,0,1,0,21.100653599424746,101.49999999999999 Z" fill="#000000" fill-opacity="1" stroke-width="0" stroke-opacity="0"></path></g><path cs="100,100" d="M20.60472,102.575 L33.59511,95.075" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><text y="5" fill="#000000" font-family="Verdana" font-size="10px" opacity="1" text-anchor="middle" transform="translate(45,87)"><tspan y="5" x="0">0</tspan></text><path cs="100,100" d="M16.74618,94.37518 L24.24444,91.5866" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M14.30915,85.6467 L22.16744,84.14765" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M13.36188,76.63403 L21.36012,76.46649" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M13.9309,67.5896 L21.84508,68.75827" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M16.00029,58.76673 L30.26614,63.40198" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><text y="5" fill="#000000" font-family="Verdana" font-size="10px" opacity="1" text-anchor="middle" transform="translate(46,68)"><tspan y="5" x="0">20</tspan></text><path cs="100,100" d="M19.51208,50.41252 L26.6017,54.11889" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M24.3679,42.76096 L30.74014,47.59775" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M30.43177,36.02635 L35.90815,41.8581" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M37.53385,30.39731 L41.96098,37.06068" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M45.47521,26.03151 L51.57626,39.7347" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><text y="5" fill="#000000" font-family="Verdana" font-size="10px" opacity="1" text-anchor="middle" transform="translate(58,54)"><tspan y="5" x="0">40</tspan></text><path cs="100,100" d="M54.03344,23.05122 L56.02296,30.79989" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M62.96884,21.53991 L63.63827,29.51185" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M72.03116,21.53991 L71.36173,29.51185" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M80.96656,23.05122 L78.97704,30.79989" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M89.52479,26.03151 L83.42374,39.7347" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><text y="5" fill="#000000" font-family="Verdana" font-size="10px" opacity="1" text-anchor="middle" transform="translate(76,54)"><tspan y="5" x="0">60</tspan></text><path cs="100,100" d="M97.46615,30.39731 L93.03902,37.06068" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M104.56823,36.02635 L99.09185,41.8581" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M110.6321,42.76096 L104.25986,47.59775" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M115.48792,50.41252 L108.3983,54.11889" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M118.99971,58.76673 L104.73386,63.40198" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><text y="5" fill="#000000" font-family="Verdana" font-size="10px" opacity="1" text-anchor="middle" transform="translate(88,68)"><tspan y="5" x="0">80</tspan></text><path cs="100,100" d="M121.0691,67.5896 L113.15492,68.75827" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M121.63812,76.63403 L113.63988,76.46649" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M120.69085,85.6467 L112.83256,84.14765" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M118.25382,94.37518 L110.75556,91.5866" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><path cs="100,100" d="M114.39528,102.575 L101.40489,95.075" fill="none" stroke-width="1" stroke-opacity="1" stroke="#000000"></path><text y="5" fill="#000000" font-family="Verdana" font-size="10px" opacity="1" text-anchor="middle" transform="translate(84,87)"><tspan y="5" x="0">100</tspan></text><text y="5" fill="#000000" font-family="Verdana" font-size="10px" opacity="1" font-weight="bold" text-anchor="middle" transform="translate(67,102)"><tspan y="5" x="0">(%) </tspan><tspan y="17" x="0"> server load</tspan></text></g><g><circle r="15" cx="0" cy="0" fill="#000000" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0" transform="translate(67,75)"></circle><path cs="100,100" d="M66.58053249032675,52.59672120637189 L81.58596,28.84503 L81.58596,28.84503 L80.94032,56.9322 Z" fill="#000000" stroke="#000000" fill-opacity="0.8" stroke-width="1" stroke-opacity="0.8"></path></g></g><g></g><g></g><g></g><g></g><g></g><g><g></g></g><g></g><g></g><g></g><g></g><g></g></svg>
-                            <a
-                                href="http://www.amcharts.com" title="JavaScript charts" style="position: absolute; text-decoration: none; color: rgb(0, 0, 0); font-family: Verdana; font-size: 11px; opacity: 0.7; display: block; left: 5px; top: 5px;">JS chart by amCharts</a>
-                        </div>
-                    </div>
-                </div>
+
+                <!-- HTML -->
+                <div id="availedservice"></div>
             </div>
         </div>
         <div data-silex-type="html" class="editable-style silex-id-1518762517346-49 html-element page-page-1 paged-element" data-silex-id="silex-id-1518762517346-49" style="">
@@ -1646,7 +1632,14 @@
                 </script>
 
                 <!-- HTML -->
-                <div id="purchasesmade"></div>
+                <div id="purchasesmade" style="overflow: hidden; text-align: left;">
+                    <div class="amcharts-main-div" style="position: relative;">
+                        <div class="amcharts-chart-div" style="overflow: hidden; position: relative; text-align: left; width: 127px; height: 200px; padding: 0px; touch-action: auto;"><svg version="1.1" style="position: absolute; width: 127px; height: 200px; top: 0.296875px; left: 0.296875px;"><desc>JavaScript chart by amCharts 3.21.12</desc><g><path cs="100,100" d="M0.5,0.5 L126.5,0.5 L126.5,199.5 L0.5,199.5 Z" fill="#FFFFFF" stroke="#000000" fill-opacity="0" stroke-width="1" stroke-opacity="0"></path></g><g></g><g></g><g></g><g></g><g></g><g><g><g><g opacity="0.8"><path cs="1000,1000" d=" M63.5,67 L63.5,59 A41,41,0,1,1,22.5,100.00000000000001 L30.5,100 A33,33,0,1,0,63.5,67 Z" fill="#eee" stroke="#000000" stroke-width="0" stroke-opacity="0"></path></g><g opacity="0.8"><path cs="1000,1000" d=" M63.5,67 L63.5,59 A41,41,0,0,1,104.37361068305825,103.21682292484164 L96.39827201319322,102.58915015901889 A33,33,0,0,0,63.5,67 Z" fill="#fdd400" stroke="#000000" stroke-width="0" stroke-opacity="0"></path></g></g><g><path cs="1000,1000" d=" M63.5,51 L63.5,48 A52,52,0,1,1,11.5,100.00000000000001 L14.5,100.00000000000001 A49,49,0,1,0,63.5,51 Z" fill="#000000" fill-opacity="0" stroke-width="0" stroke-opacity="0"></path></g><path cs="100,100" d="M64,49.675 L64,64.675" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M73.52366,50.57525 L72.0246,58.43355" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M82.70993,53.24411 L79.76493,60.68232" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M91.2334,57.58703 L86.94678,64.34165999999999" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M98.79211,63.45017 L93.31573,69.28192" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M105.11829,70.62581 L92.98303,79.44259" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M109.98783,78.85977 L102.74922,82.266" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M113.22824,87.86034 L105.47957,89.84986" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M114.72471,97.30867 L106.74049,97.811" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M114.42423,106.87006 L106.48731,105.8674" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M112.33745,116.20579 L98.0716,111.57053" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M108.53829,124.98513 L101.52783,121.1311" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M103.16134,132.89707 L96.99723,127.79768" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M96.39707,139.66134 L91.29768,133.49723" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M88.48513,145.03829 L84.6311,138.02783" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M79.70579,148.83745 L75.07053,134.5716" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M70.37006,150.92423 L69.3674,142.98731" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M60.80867,151.22471 L61.311,143.24049" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M51.36034,149.72824 L53.34986,141.97957" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M42.35977,146.48783 L45.766,139.24922" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M34.12581,141.61829 L42.94259,129.48303" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M26.95017,135.29211 L32.78192,129.81573" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M21.08703,127.7334 L27.84166,123.44678" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M16.74411,119.20993 L24.18232,116.26493" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M14.07525,110.02366 L21.93355,108.5246" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path><path cs="100,100" d="M13.175,100.5 L28.175,100.5" fill="none" stroke-width="1" stroke-opacity="0" stroke="#000000"></path></g></g><g></g><g></g><g></g><g></g><g></g><g><g></g></g><g></g><g></g><g></g><g></g><g></g></svg>
+                            <a
+                                href="http://www.amcharts.com" title="JavaScript charts" style="position: absolute; text-decoration: none; color: rgb(0, 0, 0); font-family: Verdana; font-size: 11px; opacity: 0.7; display: block; left: 5px; top: 5px;">JS chart by amCharts</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div data-silex-type="html" class="editable-style html-element silex-id-1518780158661-0 page-page-1 paged-element" data-silex-id="silex-id-1518780158661-0" style="">
@@ -1711,6 +1704,8 @@
         </div>
 
     </div>
+
+
 
 
 
