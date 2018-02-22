@@ -864,6 +864,8 @@
 
 
 
+
+
     <style id="current-page-style">
         .page-page-1 {
             display: inherit;
@@ -1535,31 +1537,31 @@
                         var gaugeChart = AmCharts.makeChart("returningusers", {
                           "type": "gauge",
                           "theme": "light",
+                          "startDuration": 6,
                           "axes": [{
                             "axisAlpha": 0,
                             "tickAlpha": 0,
-                            "labelsEnabled": false,
+                            "labelsEnabled": true,
                             "startValue": 0,
                             "endValue": 100,
                             "startAngle": 0,
-                            "endAngle": 270,
+                            "endAngle": 360,
                             "bands": [{
                               "color": "#eee",
                               "startValue": 0,
                               "endValue": 100,
-                              "radius": "80%",
-                              "innerRadius": "65%"
+                              "radius": 100%",
+                              "innerRadius": "0%",
                             }, {
                               "color": "#fdd400",
                               "startValue": 0,
-                              "endValue": 35,
-                              "radius": "80%",
-                              "innerRadius": "65%",
-                              "balloonText": "35%"
+                              "endValue": 67,
+                              "radius": "100%",
+                              "innerRadius": "85%",
+                              "balloonText": "67%"
                             }],
                             "bottomText": "79%",
                             "bottomTextYOffset": 20,
-
                           }]
                         });
                     </script>
@@ -2437,6 +2439,8 @@
             </div>
         </div>
     </div>
+
+
 
 
 
