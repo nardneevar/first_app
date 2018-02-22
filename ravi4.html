@@ -836,6 +836,8 @@
 
 
 
+
+
     <style id="current-page-style">
         .page-page-1 {
             display: inherit;
@@ -1615,7 +1617,6 @@
                         }
                     </style>
 
-
                     <!-- Resources -->
                     <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
                     <script src="https://www.amcharts.com/lib/3/gauge.js"></script>
@@ -1628,31 +1629,28 @@
                         var gaugeChart = AmCharts.makeChart("avlsvc", {
                           "type": "gauge",
                           "theme": "light",
-                          "startDuration": 6,
                           "axes": [{
                             "axisAlpha": 0,
                             "tickAlpha": 0,
-                            "labelsEnabled": true,
+                            "labelsEnabled": false,
                             "startValue": 0,
                             "endValue": 100,
                             "startAngle": 0,
-                            "endAngle": 360,
+                            "endAngle": 270,
                             "bands": [{
                               "color": "#eee",
                               "startValue": 0,
                               "endValue": 100,
-                              "radius": 100%",
-                              "innerRadius": "0%",
+                              "radius": "100%",
+                              "innerRadius": "0%"
                             }, {
                               "color": "#fdd400",
                               "startValue": 0,
-                              "endValue": 30,
-                              "radius": "100%",
-                              "innerRadius": "85%",
-                              "balloonText": "79%"
-                            }],
-                            "bottomText": "79%",
-                            "bottomTextYOffset": 20,
+                              "endValue": 35,
+                              "radius": "80%",
+                              "innerRadius": "65%",
+                              "balloonText": "35%"
+                            }]
                           }]
                         });
                     </script>
@@ -2145,6 +2143,8 @@
             </div>
         </div>
     </div>
+
+
 
 
 
